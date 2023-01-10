@@ -19,8 +19,6 @@ h2 {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* gap: 12px; */
-  /* border: 2px solid red; */
   background-color: pink;
   max-width: 80%;
   height: 80vh;
@@ -61,14 +59,22 @@ label {
 #copy {
   color: #fff;
   background-color: #063ecd;
-  padding: 6px;
+  padding: 6px 8px;
   border-radius: 4px;
   border: none;
   width: 3.75rem;
 }
 
+.copiedBox {
+  display: none;
+  padding: 3px;
+  align-self: center;
+  font-size: 15px;
+  background-color: limegreen;
+  color: #fff;
+}
+
 .outputs {
-  /* border: 2px solid green; */
   background-color: yellowgreen;
 }
 
