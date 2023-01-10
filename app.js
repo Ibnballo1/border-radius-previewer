@@ -2,6 +2,7 @@ const allRadius = document.getElementById("borderradius");
 const box = document.getElementById("box");
 const reset = document.getElementById("reset");
 const copyText = document.getElementById("copy");
+const copiedBox = document.getElementById("copiedBox");
 
 allRadius.addEventListener('input', (e) => {
   let split = '';
@@ -29,16 +30,21 @@ allRadius.addEventListener('input', (e) => {
   }
 })
 
+// Reset input Field
 reset.addEventListener("click", () => {
   allRadius.value = '';
   box.style.borderRadius = '0px';
+  copiedBox.style.display = 'none';
 });
 
-// Copy
+// Copy Border Radius
 copyText.addEventListener("click", () => {
   allRadius.select();
   allRadius.setSelectionRange(0, 99999); // For Mobile Devices
   navigator.clipboard.writeText(allRadius.value);
-  console.log(allRadius.value);
-  alert("Border Radius: " + allRadius.value);
+  copiedBox.style.display = 'flex';
+  copiedBox.innerHTML = `Border Radius ${allRadius.value}`;
+  setTimeout(()=>{
+    return (copiedBox.style.display = 'none');
+  }, 5000)
 });
