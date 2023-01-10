@@ -41,16 +41,18 @@ label {
   font-size: 1.20rem;
 }
 
-.input {
-  margin-left: 0.5rem;
-  border: 1px solid #ddd;
-  padding: 3px;
-  border-radius: 3px;
+#update {
+  margin: 0 auto;
 }
 
-.input:focus {
+#reset,
+#copy {
+  color: #fff;
+  background-color: #063ecd;
+  padding: 6px;
+  border-radius: 4px;
   border: none;
-  background-color: red;
+  width: 3.75rem;
 }
 
 .outputs {
