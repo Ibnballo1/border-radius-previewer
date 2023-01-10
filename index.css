@@ -38,11 +38,23 @@ h2 {
 label {
   font-weight: lighter;
   padding: 3px;
-  font-size: 1.20rem;
+  color: #000;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.allangles {
+  border: 1px solid #ddd;
+  padding: 4px;
+  border-radius: 4px;
 }
 
 #update {
   margin: 0 auto;
+}
+
+#reset {
+  margin-right: 12px;
 }
 
 #reset,
