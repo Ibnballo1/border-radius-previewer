@@ -6,27 +6,28 @@ const copiedBox = document.getElementById("copiedBox");
 
 allRadius.addEventListener('input', (e) => {
   let split = '';
-  let borderRadiusValue = 0;
-  borderRadiusValue = e.target.value;
+  let borderRadiusValue = e.target.value;
+  const defaultVal = 'px';
+  const tests = /[a-zA-Z]/.test(borderRadiusValue);
   split = borderRadiusValue.split(" ");
 
   if (split.length == 4) {
-    box.style.borderTopLeftRadius = split[0];
-    box.style.borderTopRightRadius = split[1];
-    box.style.borderBottomRightRadius = split[2];
-    box.style.borderBottomLeftRadius = split[3];
+    box.style.borderTopLeftRadius = tests ? split[0] : split[0] + defaultVal;
+    box.style.borderTopRightRadius = tests ? split[1] : split[1] + defaultVal;
+    box.style.borderBottomRightRadius = tests ? split[2] : split[2] + defaultVal;
+    box.style.borderBottomLeftRadius = tests ? split[3] : split[3] + defaultVal;
   } else if (split.length == 3) {
-    box.style.borderTopLeftRadius = split[0];
-    box.style.borderTopRightRadius = split[1];
-    box.style.borderBottomRightRadius = split[2];
-    box.style.borderBottomLeftRadius = split[1];
+    box.style.borderTopLeftRadius = tests ? split[0] : split[0] + defaultVal;
+    box.style.borderTopRightRadius = tests ? split[1] : split[1] + defaultVal;
+    box.style.borderBottomRightRadius = tests ? split[2] : split[2] + defaultVal;
+    box.style.borderBottomLeftRadius = tests ? split[1] : split[1] + defaultVal;
   } else if (split.length == 2) {
-    box.style.borderTopLeftRadius = split[0];
-    box.style.borderTopRightRadius = split[1];
-    box.style.borderBottomRightRadius = split[0];
-    box.style.borderBottomLeftRadius = split[1];
+    box.style.borderTopLeftRadius = tests ? split[0] : split[0] + defaultVal;
+    box.style.borderTopRightRadius = tests ? split[1] : split[1] + defaultVal;
+    box.style.borderBottomRightRadius = tests ? split[0] : split[0] + defaultVal;
+    box.style.borderBottomLeftRadius = tests ? split[1] : split[1] + defaultVal;
   } else {
-    box.style.borderRadius = borderRadiusValue;
+    box.style.borderRadius = tests ? borderRadiusValue : borderRadiusValue + defaultVal;
   }
 })
 
