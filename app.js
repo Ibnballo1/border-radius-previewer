@@ -8,7 +8,7 @@ allRadius.addEventListener('input', (e) => {
   let split = '';
   let borderRadiusValue = e.target.value;
   const defaultVal = 'px';
-  const tests = /[a-zA-Z]/.test(borderRadiusValue);
+  const tests = /[a-zA-Z\%]/.test(borderRadiusValue);
   split = borderRadiusValue.split(" ");
 
   if (split.length == 4) {
