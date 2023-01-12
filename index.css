@@ -28,9 +28,20 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
   font-weight: 400;
   font-size: 1.25rem;
+}
+
+#note {
+  font-size: 14px;
+  color: purple;
+}
+
+#note code {
+  font-weight: 600;
+  font-size: 18px;
 }
 
 label {
